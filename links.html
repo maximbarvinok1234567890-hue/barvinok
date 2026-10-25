@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1224">
+<meta name="description" content="Навчальний сайт з інформатики. Автор — Максим Барвінок.">
+<title>Корисні посилання — Максим Барвінок</title><link rel="stylesheet" href="style.css">
+
+<style>
+/* Виправлення розмітки карток ресурсів */
+.link-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0 30px;
+}
+.link-item {
+  display: flex !important;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #dfe6f1;
+  border-radius: 18px;
+  color: #17233d;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(18, 35, 65, .05);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.link-item:hover {
+  transform: translateY(-3px);
+  border-color: #67cfff;
+  box-shadow: 0 14px 30px rgba(18, 35, 65, .10);
+}
+.link-logo {
+  display: grid;
+  place-items: center;
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  font-size: 23px;
+  font-weight: 800;
+  color: #0b1224;
+  background: #e7f5ff;
+}
+.link-logo.scratch { background: #fff0d9; color: #d66b00; }
+.link-logo.code { background: #e4efff; color: #245bd7; }
+.link-logo.canva { background: #f0e8ff; color: #7044cf; }
+.link-logo.imzo { background: #e2f7ee; color: #16825c; }
+.link-logo.wiki { background: #edf0f5; color: #35435c; }
+.link-logo.safe { background: #e1f7ec; color: #16825c; }
+.link-copy {
+  display: flex !important;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 0;
+  line-height: 1.5;
+}
+.link-copy b { display: block; font-size: 18px; line-height: 1.3; }
+.link-copy small { display: block; color: #62718b; font-size: 14px; }
+.link-copy em {
+  display: inline-block;
+  color: #167fae;
+  background: #eaf8ff;
+  border-radius: 7px;
+  padding: 4px 9px;
+  font-size: 12px;
+  font-style: normal;
+}
+.external {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  color: #149ed1;
+  font-size: 22px;
+  font-weight: 700;
+}
+.note-box {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 22px;
+  margin-top: 28px;
+  border: 1px solid #d7e7fb;
+  border-radius: 16px;
+  background: #edf5ff;
+  color: #17233d;
+}
+.note-box > span { color: #258bd1; font-size: 24px; }
+.note-box p { margin: 7px 0 0; color: #62718b; line-height: 1.6; }
+@media (max-width: 760px) {
+  .link-list { grid-template-columns: 1fr; }
+  .link-item { padding: 17px; gap: 12px; }
+  .link-logo { flex-basis: 44px; width: 44px; height: 44px; }
+}
+</style>
+
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a>
+<nav class="nav" id="main-nav" aria-label="Основна навігація">
+<a class="" href="index.html">Головна</a><a class="" href="materials.html">Матеріали</a><a class="" href="homework.html">Домашні завдання</a><a class="" href="tests.html">Тести</a><a class="active" href="links.html">Посилання</a><a class="" href="contacts.html">Контакти</a>
+</nav><button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false" onclick="const n=document.getElementById('main-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button></header>
+<main>
+<section class="page-hero"><div class="eyebrow"><span class="pulse"></span> РОЗДІЛ 04</div><h1>Корисні <span>посилання.</span></h1><p>Добірка сайтів, які допоможуть вивчати інформатику, програмувати й створювати власні проєкти.</p><div class="breadcrumbs"><a href="index.html">Головна</a><span>/</span> Посилання</div></section>
+<section class="section inner-section"><div class="section-head"><div><div class="eyebrow dark">ЦИФРОВИЙ ІНСТРУМЕНТАРІЙ</div><h2>Ресурси для відкриттів</h2></div><p>Усі посилання відкриваються в новій вкладці.</p></div>
+<div class="link-list">
+<a class="link-item" href="https://scratch.mit.edu/" target="_blank" rel="noopener"><span class="link-logo scratch">S</span><span class="link-copy"><b>Scratch</b><small>Створюй ігри, анімації та інтерактивні історії.</small><em>Програмування для початківців</em></span><span class="external">↗</span></a>
+<a class="link-item" href="https://code.org/" target="_blank" rel="noopener"><span class="link-logo code">⌘</span><span class="link-copy"><b>Code.org</b><small>Інтерактивні уроки та завдання з інформатики.</small><em>Алгоритми й кодування</em></span><span class="external">↗</span></a>
+<a class="link-item" href="https://www.canva.com/" target="_blank" rel="noopener"><span class="link-logo canva">C</span><span class="link-copy"><b>Canva</b><small>Створюй презентації, постери та візуальні проєкти.</small><em>Дизайн і цифровий контент</em></span><span class="external">↗</span></a>
+<a class="link-item" href="https://lib.imzo.gov.ua/" target="_blank" rel="noopener"><span class="link-logo imzo">І</span><span class="link-copy"><b>Електронна бібліотека ІМЗО</b><small>Підручники та навчальна література українською.</small><em>Навчальні матеріали</em></span><span class="external">↗</span></a>
+<a class="link-item" href="https://uk.wikipedia.org/" target="_blank" rel="noopener"><span class="link-logo wiki">W</span><span class="link-copy"><b>Вікіпедія українською</b><small>Довідкові статті для першого ознайомлення з темою.</small><em>Довідкова інформація</em></span><span class="external">↗</span></a>
+<a class="link-item" href="https://stop-sexting.in.ua/" target="_blank" rel="noopener"><span class="link-logo safe">✓</span><span class="link-copy"><b>Stop Sexting</b><small>Поради щодо безпеки дітей та підлітків в інтернеті.</small><em>Безпека в мережі</em></span><span class="external">↗</span></a>
+</div><div class="note-box"><span>ⓘ</span><div><b>Пам’ятай про безпеку</b><p>Перевіряй адресу сайту, не вводь особисті дані на незнайомих ресурсах і повідомляй дорослим про підозрілі повідомлення.</p></div></div></section>
+</main>
+<footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a><p>© 2026 · Навчальний сайт з інформатики · Максим Барвінок</p><a href="contacts.html">Контакти ↗</a></footer>
+</body></html>
