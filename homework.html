@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1224">
+<meta name="description" content="Навчальний сайт з інформатики. Автор — Максим Барвінок.">
+<title>Домашні завдання — Максим Барвінок</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a>
+<nav class="nav" id="main-nav" aria-label="Основна навігація">
+<a class="" href="index.html">Головна</a><a class="" href="materials.html">Матеріали</a><a class="active" href="homework.html">Домашні завдання</a><a class="" href="tests.html">Тести</a><a class="" href="links.html">Посилання</a><a class="" href="contacts.html">Контакти</a>
+</nav><button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false" onclick="const n=document.getElementById('main-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button></header>
+<main>
+<section class="page-hero"><div class="eyebrow"><span class="pulse"></span> РОЗДІЛ 02</div><h1>Домашні <span>завдання.</span></h1><p>Закріплюй матеріал уроків, практикуйся самостійно й відстежуй власний прогрес.</p><div class="breadcrumbs"><a href="index.html">Головна</a><span>/</span> Домашні завдання</div></section>
+<section class="section inner-section"><div class="section-head"><div><div class="eyebrow dark">ПЛАН ДІЙ</div><h2>Твій список завдань</h2></div><p>Позначай виконане — від маленьких кроків складається великий результат.</p></div>
+<div class="task-panel"><div class="task-toolbar"><div><b>Чекліст для самостійної роботи</b><small>Це приклади завдань для тренування</small></div><span class="progress-label" id="progress-label">0 з 5 виконано</span></div><div class="progress-track"><span id="progress-bar"></span></div>
+<label class="task-row"><input type="checkbox"><span class="task-check"></span><span class="task-content"><b>Повтори основні поняття теми</b><small>Прочитай конспект або навчальний матеріал і випиши 3 нові терміни.</small></span><span class="task-tag">ТЕОРІЯ</span></label>
+<label class="task-row"><input type="checkbox"><span class="task-check"></span><span class="task-content"><b>Виконай практичну вправу</b><small>Створи документ або презентацію за темою поточного уроку.</small></span><span class="task-tag green-tag">ПРАКТИКА</span></label>
+<label class="task-row"><input type="checkbox"><span class="task-check"></span><span class="task-content"><b>Спробуй завдання в Scratch</b><small>Створи просту анімацію або змусь персонажа виконати послідовність дій.</small></span><span class="task-tag purple-tag">ТВОРЧІСТЬ</span></label>
+<label class="task-row"><input type="checkbox"><span class="task-check"></span><span class="task-content"><b>Повтори правила безпеки</b><small>Назви щонайменше три способи захистити особисті дані в мережі.</small></span><span class="task-tag">БЕЗПЕКА</span></label>
+<label class="task-row"><input type="checkbox"><span class="task-check"></span><span class="task-content"><b>Перевір себе коротким тестом</b><small>Перейди до розділу тестів і перевір, що запам’ятав.</small></span><span class="task-tag orange-tag">ПЕРЕВІРКА</span></label>
+</div><div class="two-col-info"><div class="info-card"><span class="info-symbol">◷</span><h3>Плануй час</h3><p>Розділи роботу на короткі етапи та роби перерви, якщо завдання складне.</p></div><div class="info-card"><span class="info-symbol">✎</span><h3>Працюй самостійно</h3><p>Спершу спробуй розв’язати завдання сам, а потім перевір результат.</p></div></div><p class="disclaimer">Примітка: на цій сторінці розміщені демонстраційні завдання. Конкретні домашні роботи вчитель може додавати відповідно до тем уроків.</p></section>
+<script>
+const checks=[...document.querySelectorAll('.task-row input')], label=document.getElementById('progress-label'), bar=document.getElementById('progress-bar');
+function updateProgress(){const n=checks.filter(c=>c.checked).length;label.textContent=`${n} з ${checks.length} виконано`;bar.style.width=`${n/checks.length*100}%`;}
+checks.forEach(c=>c.addEventListener('change',()=>{c.closest('.task-row').classList.toggle('completed',c.checked);updateProgress()}));
+</script>
+</main>
+<footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a><p>© 2026 · Навчальний сайт з інформатики · Максим Барвінок</p><a href="contacts.html">Контакти ↗</a></footer>
+</body></html>

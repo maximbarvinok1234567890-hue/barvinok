@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1224">
+<meta name="description" content="Навчальний сайт з інформатики. Автор — Максим Барвінок.">
+<title>Контакти — Максим Барвінок</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a>
+<nav class="nav" id="main-nav" aria-label="Основна навігація">
+<a class="" href="index.html">Головна</a><a class="" href="materials.html">Матеріали</a><a class="" href="homework.html">Домашні завдання</a><a class="" href="tests.html">Тести</a><a class="" href="links.html">Посилання</a><a class="active" href="contacts.html">Контакти</a>
+</nav><button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false" onclick="const n=document.getElementById('main-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button></header>
+<main>
+<section class="page-hero"><div class="eyebrow"><span class="pulse"></span> ЗВОРОТНИЙ ЗВ’ЯЗОК</div><h1>Давай <span>спілкуватися.</span></h1><p>Маєш запитання щодо матеріалів або пропозицію для сайту? Напиши повідомлення.</p><div class="breadcrumbs"><a href="index.html">Головна</a><span>/</span> Контакти</div></section>
+<section class="section inner-section contact-layout"><div class="contact-copy"><div class="eyebrow dark">АВТОР САЙТУ</div><h2>Максим Барвінок</h2><p>Цей сайт створено як навчальний простір з інформатики. Тут можна знайти матеріали, завдання, тести та корисні ресурси для навчання.</p><div class="contact-feature"><span>✉</span><div><b>Є запитання?</b><small>Скористайся формою повідомлення поруч.</small></div></div><div class="contact-feature"><span>⌘</span><div><b>Пропозиції щодо сайту</b><small>Ідеї для нових матеріалів завжди вітаються.</small></div></div><div class="contact-note">Не публікуй у повідомленнях паролі, адресу проживання чи інші особисті дані.</div></div>
+<form class="contact-form" id="contact-form"><div class="form-heading"><span class="form-icon">↗</span><div><h3>Написати повідомлення</h3><p>Заповни поля, а потім відкрий лист у своїй поштовій програмі.</p></div></div><label for="name">Твоє ім’я</label><input id="name" name="name" placeholder="Як до тебе звертатися?" required maxlength="80"><label for="topic">Тема повідомлення</label><select id="topic" name="topic"><option>Запитання щодо матеріалів</option><option>Пропозиція для сайту</option><option>Повідомити про помилку</option><option>Інше</option></select><label for="message">Повідомлення</label><textarea id="message" name="message" rows="5" placeholder="Напиши своє повідомлення..." required maxlength="2000"></textarea><button class="btn btn-primary" type="submit">Підготувати лист <span>↗</span></button><p class="form-help" id="form-help">Форма не надсилає дані на сервер — вона відкриє поштову програму на твоєму пристрої.</p></form></section>
+<script>
+document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value.trim();const topic=document.getElementById('topic').value;const message=document.getElementById('message').value.trim();const body=`Ім’я: ${name}\\n\\n${message}\\n\\n— Надіслано з навчального сайту Максима Барвінка`;const subject=encodeURIComponent(topic);const mailBody=encodeURIComponent(body);document.getElementById('form-help').textContent='Поштова програма має відкритися. Щоб реально отримувати листи, додай свою електронну адресу в код сторінки.';window.location.href=`mailto:?subject=${subject}&body=${mailBody}`;});
+</script>
+</main>
+<footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a><p>© 2026 · Навчальний сайт з інформатики · Максим Барвінок</p><a href="contacts.html">Контакти ↗</a></footer>
+</body></html>

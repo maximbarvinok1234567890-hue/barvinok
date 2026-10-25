@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1224">
+<meta name="description" content="Навчальний сайт з інформатики. Автор — Максим Барвінок.">
+<title>Тести та вправи — Максим Барвінок</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a>
+<nav class="nav" id="main-nav" aria-label="Основна навігація">
+<a class="" href="index.html">Головна</a><a class="" href="materials.html">Матеріали</a><a class="" href="homework.html">Домашні завдання</a><a class="active" href="tests.html">Тести</a><a class="" href="links.html">Посилання</a><a class="" href="contacts.html">Контакти</a>
+</nav><button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false" onclick="const n=document.getElementById('main-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button></header>
+<main>
+<section class="page-hero"><div class="eyebrow"><span class="pulse"></span> РОЗДІЛ 03</div><h1>Перевір свої <span>знання.</span></h1><p>Короткий інтерактивний тест з основ інформатики. Обирай відповіді й одразу дивись результат.</p><div class="breadcrumbs"><a href="index.html">Головна</a><span>/</span> Тести</div></section>
+<section class="section inner-section quiz-section"><div class="quiz-intro"><div class="eyebrow dark">МІНІТЕСТ · 5 ЗАПИТАНЬ</div><h2>Наскільки добре ти знаєш інформатику?</h2><p>У кожному питанні обери одну відповідь. У кінці побачиш результат і пояснення.</p></div>
+<div class="quiz-card" id="quiz-card"><div class="quiz-progress"><span id="question-count">ПИТАННЯ 1 / 5</span><div class="mini-track"><span id="quiz-bar"></span></div></div><h3 id="question">Що таке алгоритм?</h3><div class="answers" id="answers"></div><div class="quiz-controls"><span id="feedback" aria-live="polite">Обери відповідь, щоб продовжити.</span><button class="btn btn-primary" id="next-btn" disabled>Далі <span>→</span></button></div></div>
+<div class="quiz-result" id="quiz-result" hidden><div class="result-icon">✦</div><div class="eyebrow dark">ТЕСТ ЗАВЕРШЕНО</div><h2 id="result-title">Чудова робота!</h2><p id="result-text"></p><button class="btn btn-primary" id="restart-btn">Пройти ще раз ↻</button></div>
+</section>
+<script>
+const quiz=[
+{q:"Що таке алгоритм?",a:["Набір випадкових символів","Точна послідовність дій для розв’язання задачі","Назва комп’ютерної гри"],correct:1,why:"Алгоритм — це скінченна послідовність зрозумілих дій для досягнення результату."},
+{q:"Який пристрій призначений для введення тексту?",a:["Монітор","Колонки","Клавіатура"],correct:2,why:"Клавіатура дає змогу вводити текст, числа та команди."},
+{q:"Що потрібно робити з паролем?",a:["Не повідомляти його стороннім","Публікувати в соцмережах","Використовувати слово «пароль»"],correct:0,why:"Надійний пароль слід тримати в секреті та не використовувати надто прості комбінації."},
+{q:"Що можна створювати у Scratch?",a:["Лише текстові документи","Анімації, ігри та інтерактивні історії","Тільки таблиці"],correct:1,why:"Scratch — середовище, у якому можна створювати анімації, ігри й історії за допомогою блоків."},
+{q:"Що робити, якщо незнайомець в інтернеті просить особисті дані?",a:["Надіслати їх одразу","Опублікувати адресу","Не надсилати й звернутися до дорослого, якому довіряєш"],correct:2,why:"Не передавай особисті дані незнайомцям. Якщо щось насторожує, звернися до дорослого, якому довіряєш."}
+];
+let index=0,score=0,chosen=null,answered=false;
+const question=document.getElementById('question'), answers=document.getElementById('answers'), feedback=document.getElementById('feedback'), next=document.getElementById('next-btn');
+function render(){chosen=null;answered=false;const item=quiz[index];document.getElementById('question-count').textContent=`ПИТАННЯ ${index+1} / ${quiz.length}`;document.getElementById('quiz-bar').style.width=`${index/quiz.length*100}%`;question.textContent=item.q;feedback.textContent="Обери відповідь, щоб продовжити.";next.disabled=true;next.innerHTML=index===quiz.length-1?'Побачити результат <span>→</span>':'Далі <span>→</span>';answers.innerHTML='';item.a.forEach((text,i)=>{const b=document.createElement('button');b.className='answer';b.innerHTML=`<span class="answer-letter">${String.fromCharCode(65+i)}</span><span>${text}</span>`;b.addEventListener('click',()=>select(i,b));answers.appendChild(b)});}
+function select(i,button){if(answered)return;chosen=i;answered=true;const item=quiz[index];[...answers.children].forEach((b,n)=>{b.disabled=true;if(n===item.correct)b.classList.add('correct');else if(n===i)b.classList.add('incorrect')});if(i===item.correct){score++;feedback.textContent='Правильно! '+item.why}else{feedback.textContent='Не зовсім. '+item.why}next.disabled=false;}
+next.addEventListener('click',()=>{if(!answered)return;if(index<quiz.length-1){index++;render()}else{document.getElementById('quiz-card').hidden=true;document.getElementById('quiz-result').hidden=false;document.getElementById('quiz-bar').style.width='100%';document.getElementById('result-title').textContent=score>=4?'Чудова робота!':score>=3?'Гарний результат!':'Продовжуй тренуватися!';document.getElementById('result-text').textContent=`Твій результат: ${score} із ${quiz.length}. ${score===5?'Усі відповіді правильні — супер!':'Переглянь пояснення й спробуй ще раз, щоб закріпити знання.'}`;}});
+document.getElementById('restart-btn').addEventListener('click',()=>{index=0;score=0;document.getElementById('quiz-card').hidden=false;document.getElementById('quiz-result').hidden=true;render()});
+render();
+</script>
+</main>
+<footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span><span><strong>ІНФО<span>МІР</span></strong><small>навчальний простір</small></span></a><p>© 2026 · Навчальний сайт з інформатики · Максим Барвінок</p><a href="contacts.html">Контакти ↗</a></footer>
+</body></html>
