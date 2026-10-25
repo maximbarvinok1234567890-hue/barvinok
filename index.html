@@ -1,100 +1,104 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Освітній сайт Максима Барвінка — професійна освіта та комп'ютерні технології.">
-  <title>Максим Барвінок — цифровий простір</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональний сайт-практика</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Підключення іконок FontAwesome -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
-  <div class="progress" id="progress"></div>
-  <header class="header">
-    <a class="brand" href="#home" aria-label="На головну"><span class="brand-mark">MB</span><span>MAX<span class="accent">.TECH</span></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav" id="nav">
-      <a href="#about">Про мене</a><a href="#students">Учням</a><a href="#teachers">Вчителям</a><a href="#ukraine">В Україні</a><a href="#world">У світі</a><a href="#contacts" class="nav-cta">Контакти ↗</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-grid"></div>
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> ОСВІТА · ТЕХНОЛОГІЇ · МАЙБУТНЄ</div>
-        <h1>Привіт, я<br><span class="gradient-text">Максим Барвінок.</span></h1>
-        <p class="hero-lead">Досліджую цифровий світ, комп’ютерні технології та можливості, які відкриває сучасна освіта.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#about">Познайомитись <span>↘</span></a><a class="button button-ghost" href="#resources">Освітні ресурси <span>↗</span></a></div>
-        <div class="hero-meta"><span><b>01</b> Освітній простір</span><span><b>02</b> Технологічна практика</span></div>
-      </div>
-      <div class="hero-art reveal">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="tech-card main-card"><div class="window-dots"><i></i><i></i><i></i><span>digital_world.exe</span></div><div class="code-lines"><p><span class="code-purple">const</span> future = {</p><p class="indent"><span class="code-blue">knowledge</span>: <span class="code-green">"always learning"</span>,</p><p class="indent"><span class="code-blue">creativity</span>: <span class="code-orange">true</span>,</p><p class="indent"><span class="code-blue">possibilities</span>: <span class="code-green">"unlimited"</span></p><p>};</p><p class="code-comment">// keep exploring_</p></div><div class="card-bottom"><span class="pulse"></span> SYSTEM ONLINE <span>v.2026</span></div></div>
-        <div class="float-chip chip-top">⌘ <span>CREATE</span></div><div class="float-chip chip-bottom">0101 <span>LEARN</span></div><div class="glow-ball"></div>
-      </div>
-      <a class="scroll-note" href="#about"><span class="scroll-line"></span> ГОРТАЙТЕ ДАЛІ</a>
-    </section>
+    <!-- Навігація (Головне меню) -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><i class="fa-solid fa-code"></i> IT-Практика</a>
+            </div>
+            
+            <ul class="nav-links">
+                <!-- 1. ПРО МЕНЕ -->
+                <li class="dropdown">
+                    <a href="#about" class="dropbtn">Про мене <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-trophy"></i> Досягнення</a>
+                        <a href="#"><i class="fa-solid fa-book-open"></i> Біографія</a>
+                        <a href="#"><i class="fa-solid fa-briefcase"></i> Кар’єра</a>
+                        <a href="#"><i class="fa-solid fa-gamepad"></i> Хобі</a>
+                    </div>
+                </li>
 
-    <section class="section about-section" id="about">
-      <div class="section-label reveal"><span>01 / ПРО МЕНЕ</span><span class="label-line"></span></div>
-      <div class="about-layout">
-        <div class="about-title reveal"><h2>Технології — це<br><span class="muted">інструмент змін.</span></h2><p class="large-copy">Мене цікавить, як цифрові рішення допомагають людям навчатися, працювати та створювати нове.</p></div>
-        <div class="about-content reveal"><p>Вітаю на моєму освітньому сайті! Я Максим Барвінок, студент напряму професійної освіти у сфері комп’ютерних технологій. Цей сайт створено як навчальний проєкт для технологічної практики.</p><p>Тут зібрано корисні матеріали з інформатики, цифрової грамотності, програмування та використання технологій в освіті. Сайт також є майданчиком для дослідження сучасних цифрових інструментів.</p>
-          <div class="info-grid"><div class="info-box"><span class="info-icon">⌘</span><div><b>Напрям</b><small>Комп’ютерні технології</small></div></div><div class="info-box"><span class="info-icon">↗</span><div><b>Мета</b><small>Навчатися й ділитися знаннями</small></div></div></div>
+                <!-- 2. УЧНЯМ -->
+                <li class="dropdown">
+                    <a href="#students" class="dropbtn">Учням <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-file-pen"></i> Тести</a>
+                        <a href="#"><i class="fa-solid fa-book"></i> Підручники</a>
+                        <a href="#"><i class="fa-solid fa-folder-open"></i> Навч. матеріали</a>
+                        <a href="#"><i class="fa-solid fa-graduation-cap"></i> Курси</a>
+                        <a href="#"><i class="fa-solid fa-video"></i> Відео</a>
+                        <a href="#"><i class="fa-solid fa-note-sticky"></i> Конспекти</a>
+                        <a href="#"><i class="fa-solid fa-lightbulb"></i> Вікторини</a>
+                        <a href="#"><i class="fa-solid fa-medal"></i> Олімпіади</a>
+                        <a href="#"><i class="fa-solid fa-face-smile"></i> Розваги та ігри</a>
+                        <a href="#"><i class="fa-solid fa-users"></i> Гуртки</a>
+                    </div>
+                </li>
+
+                <!-- 3. ВЧИТЕЛЯМ -->
+                <li class="dropdown">
+                    <a href="#teachers" class="dropbtn">Вчителям <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-book"></i> Підручники</a>
+                        <a href="#"><i class="fa-solid fa-chalkboard-user"></i> Презентації</a>
+                        <a href="#"><i class="fa-solid fa-video"></i> Відео</a>
+                        <a href="#"><i class="fa-solid fa-diagram-project"></i> Проєкти</a>
+                        <a href="#"><i class="fa-solid fa-file-lines"></i> Конспекти</a>
+                        <a href="#"><i class="fa-solid fa-scroll"></i> Програми</a>
+                        <a href="#"><i class="fa-solid fa-certificate"></i> Курси підв. кваліф.</a>
+                    </div>
+                </li>
+
+                <!-- 4. В УКРАЇНІ -->
+                <li class="dropdown">
+                    <a href="#ukraine" class="dropbtn">В Україні <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-newspaper"></i> Новинки олімпіад</a>
+                        <a href="#"><i class="fa-solid fa-star"></i> Конкурси</a>
+                        <a href="#"><i class="fa-solid fa-list-check"></i> Навчальні програми</a>
+                        <a href="#"><i class="fa-solid fa-calendar-days"></i> Заходи</a>
+                    </div>
+                </li>
+
+                <!-- 5. У СВІТІ -->
+                <li class="dropdown">
+                    <a href="#world" class="dropbtn">У світі <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fa-solid fa-earth-americas"></i> Новинки IT</a>
+                        <a href="#"><i class="fa-solid fa-globe"></i> Міжнародні події</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Головний контент сайту (Hero Section) -->
+    <main class="hero">
+        <div class="hero-container">
+            <h1>Привіт! Рад вітати на моєму сайті-практиці</h1>
+            <p>Тут зібрані корисні уроки, тести, програми та матеріали для учнів, вчителів та всіх, хто цікавиться IT.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">До матеріалів →</a>
+                <a href="#" class="btn btn-secondary">Зв'язатися зі мною</a>
+            </div>
         </div>
-      </div>
-    </section>
+    </main>
 
-    <section class="section resources-section" id="students">
-      <div class="section-label reveal"><span>02 / УЧНЯМ</span><span class="label-line"></span></div>
-      <div class="section-heading reveal"><div><h2>Навчайся <span class="gradient-text">розумніше.</span></h2><p>Добірка напрямів, з яких варто почати знайомство з цифровим світом.</p></div><span class="section-index">LEARN / 01</span></div>
-      <div class="card-grid">
-        <article class="resource-card reveal"><div class="card-icon purple">⌨</div><span class="card-number">01</span><h3>Основи програмування</h3><p>Алгоритми, логіка та перші кроки у створенні програм. Почни з базових понять і практичних задач.</p><a href="https://scratch.mit.edu/" target="_blank" rel="noopener">Спробувати Scratch <span>↗</span></a></article>
-        <article class="resource-card reveal"><div class="card-icon blue">◈</div><span class="card-number">02</span><h3>Цифрова грамотність</h3><p>Безпечна робота в інтернеті, пошук інформації, хмарні сервіси та відповідальне використання даних.</p><a href="https://www.digitalliteracy.gov/" target="_blank" rel="noopener">Вивчати основи <span>↗</span></a></article>
-        <article class="resource-card reveal"><div class="card-icon green">▧</div><span class="card-number">03</span><h3>Веброзробка</h3><p>Створюй власні сторінки за допомогою HTML, CSS і JavaScript — від першого макета до інтерактивності.</p><a href="https://developer.mozilla.org/uk/docs/Learn" target="_blank" rel="noopener">Навчатися вебу <span>↗</span></a></article>
-      </div>
-    </section>
+    <!-- Підвал (Footer) -->
+    <footer>
+        <p>&copy; 2026 · Зроблено з <i class="fa-solid fa-heart" style="color: #ff4a5a;"></i> для технологічної практики</p>
+    </footer>
 
-    <section class="section teacher-section" id="teachers">
-      <div class="section-label reveal"><span>03 / ВЧИТЕЛЯМ</span><span class="label-line"></span></div>
-      <div class="teacher-layout">
-        <div class="teacher-copy reveal"><h2>Освіта, що<br><span class="gradient-text">надихає.</span></h2><p>Цифрові інструменти можуть зробити навчання наочнішим, інтерактивнішим і ближчим до потреб сучасних учнів.</p><a class="text-link" href="#resources">Перейти до ресурсів <span>↘</span></a></div>
-        <div class="teacher-list reveal"><a class="teacher-item" href="https://classroom.google.com/" target="_blank" rel="noopener"><span class="list-symbol">01</span><span><b>Організація навчання</b><small>Цифрові класи, завдання та зворотний зв’язок</small></span><span class="arrow">↗</span></a><a class="teacher-item" href="https://wordwall.net/" target="_blank" rel="noopener"><span class="list-symbol">02</span><span><b>Інтерактивні вправи</b><small>Навчальні ігри, тести й повторення матеріалу</small></span><span class="arrow">↗</span></a><a class="teacher-item" href="https://www.canva.com/education/" target="_blank" rel="noopener"><span class="list-symbol">03</span><span><b>Візуальні матеріали</b><small>Презентації, схеми та навчальні плакати</small></span><span class="arrow">↗</span></a><a class="teacher-item" href="https://learningapps.org/" target="_blank" rel="noopener"><span class="list-symbol">04</span><span><b>Навчальні модулі</b><small>Конструктор інтерактивних завдань</small></span><span class="arrow">↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="section split-section" id="ukraine">
-      <div class="section-label reveal"><span>04 / В УКРАЇНІ</span><span class="label-line"></span></div>
-      <div class="split-layout"><div class="split-heading reveal"><span class="mini-tag">DIGITAL UKRAINE</span><h2>Українська освіта<br>у цифрову <span class="gradient-text">епоху.</span></h2></div><div class="split-copy reveal"><p>В Україні розвиваються цифрові освітні сервіси, онлайн-навчання та відкриті ресурси. Вони допомагають учням і вчителям отримувати знання незалежно від місця перебування.</p><a class="resource-link" href="https://osvita.diia.gov.ua/" target="_blank" rel="noopener"><span class="resource-link-icon">UA</span><span><b>Дія.Освіта</b><small>Безоплатні освітні серіали та курси</small></span><span class="arrow">↗</span></a><a class="resource-link" href="https://lms.e-school.net.ua/" target="_blank" rel="noopener"><span class="resource-link-icon">◎</span><span><b>Всеукраїнська школа онлайн</b><small>Навчальні матеріали для школярів</small></span><span class="arrow">↗</span></a></div></div>
-    </section>
-
-    <section class="section world-section" id="world">
-      <div class="section-label reveal"><span>05 / У СВІТІ</span><span class="label-line"></span></div>
-      <div class="section-heading reveal"><div><h2>Знання не мають <span class="gradient-text">кордонів.</span></h2><p>Міжнародні платформи для самостійного навчання й розвитку цифрових навичок.</p></div><span class="section-index">GLOBAL / 02</span></div>
-      <div class="world-grid">
-        <a class="world-card reveal" href="https://www.khanacademy.org/" target="_blank" rel="noopener"><span class="world-symbol">K</span><span class="world-type">ОСВІТНЯ ПЛАТФОРМА</span><h3>Khan Academy</h3><p>Безоплатні уроки з математики, природничих наук та інших дисциплін.</p><span class="world-arrow">↗</span></a>
-        <a class="world-card reveal" href="https://www.freecodecamp.org/" target="_blank" rel="noopener"><span class="world-symbol">⌘</span><span class="world-type">ПРОГРАМУВАННЯ</span><h3>freeCodeCamp</h3><p>Практичні курси з веброзробки, програмування та роботи з даними.</p><span class="world-arrow">↗</span></a>
-        <a class="world-card reveal" href="https://www.coursera.org/" target="_blank" rel="noopener"><span class="world-symbol">C</span><span class="world-type">ОНЛАЙН-КУРСИ</span><h3>Coursera</h3><p>Курси й навчальні програми від університетів та компаній.</p><span class="world-arrow">↗</span></a>
-      </div>
-    </section>
-
-    <section class="section resources-extra" id="resources">
-      <div class="section-label reveal"><span>06 / КОРИСНЕ</span><span class="label-line"></span></div>
-      <div class="resource-banner reveal"><div><span class="mini-tag">YOUR NEXT STEP</span><h2>Найкращий час<br>навчитися нового — <span class="gradient-text">зараз.</span></h2><p>Обери ресурс, постав собі невелику мету й рухайся вперед крок за кроком.</p></div><div class="banner-orb"><span>∞</span></div></div>
-      <div class="facts-row reveal"><div><span class="fact-big">01</span><p>Починай із малого: регулярна практика важливіша за ідеальний старт.</p></div><div><span class="fact-big">02</span><p>Перевіряй джерела інформації та дбай про безпеку своїх даних.</p></div><div><span class="fact-big">03</span><p>Створюй власні проєкти — так знання перетворюються на навички.</p></div></div>
-    </section>
-
-    <section class="contact-section section" id="contacts">
-      <div class="contact-glow"></div><div class="section-label reveal"><span>07 / КОНТАКТИ</span><span class="label-line"></span></div>
-      <div class="contact-layout reveal"><div><span class="mini-tag">LET'S CONNECT</span><h2>Є ідея?<br><span class="gradient-text">Почнімо.</span></h2><p>Цей сайт створено в межах технологічної практики як приклад освітнього цифрового проєкту.</p></div><div class="contact-panel"><span class="contact-avatar">MB</span><div><small>АВТОР САЙТУ</small><h3>Максим Барвінок</h3><p>Професійна освіта<br>(комп’ютерні технології)</p></div><a class="email-link" href="mailto:example@email.com">Написати автору ↗</a><small class="placeholder-note">Перед публікацією заміни example@email.com на свою пошту або прибери посилання.</small></div></div>
-    </section>
-  </main>
-
-  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">MB</span><span>MAX<span class="accent">.TECH</span></span></a><p>Навчайся. Досліджуй. Створюй.</p><span>© <span id="year"></span> Максим Барвінок · Технологічна практика</span></footer>
-  <button class="to-top" id="toTop" aria-label="На початок сторінки">↑</button>
-  <script src="script.js"></script>
 </body>
 </html>
